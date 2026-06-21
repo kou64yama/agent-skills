@@ -26,23 +26,34 @@ instructions.
 
 ## Installation
 
-Install a skill by copying or symlinking its directory into your Codex skills
-directory:
+Install skills with the [`vercel-labs/skills`](https://github.com/vercel-labs/skills)
+CLI:
 
 ```sh
-mkdir -p ~/.codex/skills
-ln -s "$(pwd)/skills/<skill-name>" ~/.codex/skills/<skill-name>
+npx skills add kou64yama/agent-skills -a codex
 ```
 
-Alternatively, copy the directory if you prefer a standalone local install:
+Install a specific skill by name:
 
 ```sh
-mkdir -p ~/.codex/skills
-cp -R skills/<skill-name> ~/.codex/skills/
+npx skills add kou64yama/agent-skills -a codex --skill <skill-name>
 ```
 
-Restart Codex after installing or updating skills so it can discover the latest
-definitions.
+Install globally so the skills are available across projects:
+
+```sh
+npx skills add kou64yama/agent-skills -a codex -g
+```
+
+List available skills without installing:
+
+```sh
+npx skills add kou64yama/agent-skills --list
+```
+
+The `skills` CLI can install from GitHub shorthand, full GitHub URLs, local
+paths, and direct paths to a skill directory. Restart Codex after installing or
+updating skills so it can discover the latest definitions.
 
 ## Usage
 
