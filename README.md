@@ -24,6 +24,8 @@ Each subdirectory under `skills/` is an installable skill. See the `SKILL.md`
 inside each skill directory for its purpose, trigger description, and operating
 instructions.
 
+- `conventional-commits`: Write and review commit messages using the
+  Conventional Commits 1.0.0 specification.
 - `gemini-cli`: Invoke Gemini CLI for advisory help, second opinions, or
   persistent sessions.
 - `pair-programming`: Collaborate on coding tasks with balanced Driver and
