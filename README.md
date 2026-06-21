@@ -24,6 +24,10 @@ Each subdirectory under `skills/` is an installable skill. See the `SKILL.md`
 inside each skill directory for its purpose, trigger description, and operating
 instructions.
 
+- `pair-programming`: Collaborate on coding tasks with balanced Driver and
+  Navigator perspectives across planning, implementation, validation, and
+  review.
+
 ## Installation
 
 Install skills with the [`vercel-labs/skills`](https://github.com/vercel-labs/skills)
