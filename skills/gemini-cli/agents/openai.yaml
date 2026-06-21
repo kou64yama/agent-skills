@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gemini CLI"
+  short_description: "Ask Gemini CLI or resume a session"
+  default_prompt: "Use $gemini-cli to ask Gemini for an advisory second opinion."
