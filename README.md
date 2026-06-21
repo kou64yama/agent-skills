@@ -84,3 +84,7 @@ When adding a new skill:
 - include clear YAML front matter with `name` and `description`;
 - add optional agent metadata under `skills/<skill-name>/agents/`;
 - update this README with a short entry under [Skills](#skills).
+
+## License
+
+MIT. See [LICENSE](./LICENSE) for details.
