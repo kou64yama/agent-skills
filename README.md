@@ -24,6 +24,8 @@ Each subdirectory under `skills/` is an installable skill. See the `SKILL.md`
 inside each skill directory for its purpose, trigger description, and operating
 instructions.
 
+- `gemini-cli`: Invoke Gemini CLI for advisory help, second opinions, or
+  persistent sessions.
 - `pair-programming`: Collaborate on coding tasks with balanced Driver and
   Navigator perspectives across planning, implementation, validation, and
   review.
