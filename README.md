@@ -28,6 +28,8 @@ instructions.
   Conventional Commits 1.0.0 specification.
 - `gemini-cli`: Invoke Gemini CLI for advisory help, second opinions, or
   persistent sessions.
+- `git-commit-messages`: Write and review readable Git commit messages using
+  common Git history conventions.
 - `pair-programming`: Collaborate on coding tasks with balanced Driver and
   Navigator perspectives across planning, implementation, validation, and
   review.
