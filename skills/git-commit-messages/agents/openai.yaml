@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Commit Messages"
+  short_description: "Write readable Git commit messages"
+  default_prompt: "Use $git-commit-messages to draft a clear Git commit message for my staged changes."
