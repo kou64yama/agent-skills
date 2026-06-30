@@ -46,6 +46,25 @@ Focus on direction and solution quality:
 - Use the Driver view to identify concrete next changes.
 - Use the Navigator view to evaluate alternatives, risks, and alignment.
 
+#### In Plan Mode
+
+When producing a final plan in Plan Mode, embed the pair-programming procedure
+inside the plan itself. Keep it concise and proportional:
+
+- Include shared understanding: goal, relevant context, success criteria, and
+  assumptions.
+- Include Driver cues: concrete next changes and implementation order.
+- Include Navigator cues: risks, alternatives, architectural fit, and
+  trade-offs.
+- Include validation: tests, checks, edge cases, and what cannot be verified.
+- Include review and continuation criteria: remaining risks, simplifications,
+  and the next most valuable action.
+
+For small plans, fold these cues into ordinary plan bullets. For substantial
+plans, make the cues explicit enough that another engineer or agent can follow
+the pair-programming loop without assigning Driver or Navigator permanently to
+any participant.
+
 ### 3. Implement
 
 - Work in small, coherent increments.
