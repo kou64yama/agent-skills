@@ -1,0 +1,4 @@
+interface:
+  display_name: "Technical Writing Review"
+  short_description: "Review technical documents for reader success"
+  default_prompt: "Use $technical-writing-review to review this document and prioritize the most important improvements."

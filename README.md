@@ -33,6 +33,8 @@ instructions.
 - `pair-programming`: Collaborate on coding tasks with balanced Driver and
   Navigator perspectives across planning, implementation, validation, and
   review.
+- `technical-writing-review`: Review technical documents for clarity,
+  structure, accuracy, and task success.
 
 ## Installation
 
