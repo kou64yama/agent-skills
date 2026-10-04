@@ -35,6 +35,21 @@ instructions.
   review.
 - `technical-writing-review`: Review technical documents for clarity,
   structure, accuracy, and task success.
+- `translate-to-native`: Translate foreign-language text into the user's native
+  language with explanations of key choices.
+- `translate-to-non-native`: Translate native-language text into another language
+  with the requested style.
+- `proofread-non-native`: Evaluate and improve non-native-language text, explaining
+  revisions in the user's native language.
+- `reply-in-non-native`: Translate incoming messages and outgoing replies using
+  conversation context.
+- `translate`: Select the appropriate translation skill and retain language,
+  style, and conversation settings.
+
+The integrated `translate` workflow also requires the four standalone skills:
+`translate-to-native`, `translate-to-non-native`, `proofread-non-native`, and
+`reply-in-non-native`. Install them alongside `translate`; each standalone skill
+can also be used independently.
 
 ## Installation
 

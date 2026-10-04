@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reply in Non-Native"
+  short_description: "Translate incoming messages and outgoing replies"
+  default_prompt: "Use $reply-in-non-native to help me understand this received message and reply in the other participant's language."

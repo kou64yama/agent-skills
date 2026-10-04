@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translate to Native"
+  short_description: "Understand text in your native language"
+  default_prompt: "Use $translate-to-native to translate this text into my native language and explain the key choices."
