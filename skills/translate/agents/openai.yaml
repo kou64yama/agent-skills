@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translate"
+  short_description: "Choose translation, proofreading, or reply support"
+  default_prompt: "Use $translate to help me with this text, selecting the appropriate translation, proofreading, or reply workflow."

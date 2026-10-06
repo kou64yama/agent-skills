@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translate to Non-Native"
+  short_description: "Express your text in another language"
+  default_prompt: "Use $translate-to-non-native to translate this text into my target language in the requested style."
