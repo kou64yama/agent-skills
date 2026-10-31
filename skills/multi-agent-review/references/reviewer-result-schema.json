@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Review Results",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "location",
+      "severity",
+      "finding",
+      "require_action",
+      "confidence_level"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^R-[A-Za-z0-9-]+-[0-9]+$",
+        "description": "Unique finding ID: R-{review-dimension}-{sequence}, for example R-security-01."
+      },
+      "location": {
+        "type": "string",
+        "minLength": 1,
+        "description": "In-scope location, such as a file path and line number."
+      },
+      "severity": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Severity value defined by the supplied review policy."
+      },
+      "finding": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Actionable issue and its supporting evidence."
+      },
+      "require_action": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Action needed to address the finding."
+      },
+      "confidence_level": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 100,
+        "description": "Confidence in the finding, from 0 to 100."
+      }
+    }
+  }
+}
