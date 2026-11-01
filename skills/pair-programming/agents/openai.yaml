@@ -1,4 +1,0 @@
-interface:
-  display_name: "Pair Programming"
-  short_description: "Balance implementation with strategic review"
-  default_prompt: "Use $pair-programming to collaborate on this coding task with Driver and Navigator perspectives."

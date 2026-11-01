@@ -26,13 +26,6 @@ instructions.
 
 - `conventional-commits`: Write and review commit messages using the
   Conventional Commits 1.0.0 specification.
-- `gemini-cli`: Invoke Gemini CLI for advisory help, second opinions, or
-  persistent sessions.
-- `git-commit-messages`: Write and review readable Git commit messages using
-  common Git history conventions.
-- `pair-programming`: Collaborate on coding tasks with balanced Driver and
-  Navigator perspectives across planning, implementation, validation, and
-  review.
 - `technical-writing-review`: Review technical documents for clarity,
   structure, accuracy, and task success.
 - `translate-to-native`: Translate foreign-language text into the user's native
