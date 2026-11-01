@@ -55,6 +55,8 @@ For a conflict set, the validator must evaluate each alternative and explicitly 
 
 Start with the reviewed scope, dimensions, and a concise outcome. Then show findings in review-policy priority order, with verified items first. Each finding must include its ID, location, severity, finding, required action, confidence, validation status, and supporting reviewer dimensions.
 
+Assign user-facing IDs after consolidation and validation in presentation order: `R-01`, `R-02`, and so on. Use one unique sequence across verified findings, needs-attention items, and unresolved conflict sets. Retain original reviewer IDs internally for attribution and traceability.
+
 Follow with a separate **Needs attention** section for non-rejected items the validator could not confirm, including the reason. Follow that with an **Unresolved conflicts** section when applicable, showing the competing claims and what evidence would resolve them. Report that no actionable findings were verified when that is the outcome.
 
 Keep raw agent transcripts out of the user-facing result unless the user asks for them.
