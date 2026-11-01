@@ -1,0 +1,4 @@
+interface:
+  display_name: "Multi-Agent Review"
+  short_description: "Coordinate independent reviews and validation"
+  default_prompt: "Use $multi-agent-review to review this artifact from independent perspectives and validate the findings."
