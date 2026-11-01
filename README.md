@@ -24,20 +24,16 @@ Each subdirectory under `skills/` is an installable skill. See the `SKILL.md`
 inside each skill directory for its purpose, trigger description, and operating
 instructions.
 
-- `conventional-commits`: Write and review commit messages using the
-  Conventional Commits 1.0.0 specification.
-- `technical-writing-review`: Review technical documents for clarity,
-  structure, accuracy, and task success.
-- `translate-to-native`: Translate foreign-language text into the user's native
-  language with explanations of key choices.
-- `translate-to-non-native`: Translate native-language text into another language
-  with the requested style.
-- `proofread-non-native`: Evaluate and improve non-native-language text, explaining
-  revisions in the user's native language.
-- `reply-in-non-native`: Translate incoming messages and outgoing replies using
-  conversation context.
-- `translate`: Select the appropriate translation skill and retain language,
-  style, and conversation settings.
+| Skill | Description |
+| --- | --- |
+| [`conventional-commits`](skills/conventional-commits/SKILL.md) | Write and review commit messages using the Conventional Commits 1.0.0 specification. |
+| [`multi-agent-review`](skills/multi-agent-review/SKILL.md) | Coordinate independent reviews and validate their findings. |
+| [`proofread-non-native`](skills/proofread-non-native/SKILL.md) | Evaluate and improve non-native-language text, explaining revisions in the user's native language. |
+| [`reply-in-non-native`](skills/reply-in-non-native/SKILL.md) | Translate incoming messages and outgoing replies using conversation context. |
+| [`technical-writing-review`](skills/technical-writing-review/SKILL.md) | Review technical documents for clarity, structure, accuracy, and task success. |
+| [`translate`](skills/translate/SKILL.md) | Select the appropriate translation skill and retain language, style, and conversation settings. |
+| [`translate-to-native`](skills/translate-to-native/SKILL.md) | Translate foreign-language text into the user's native language with explanations of key choices. |
+| [`translate-to-non-native`](skills/translate-to-non-native/SKILL.md) | Translate native-language text into another language with the requested style. |
 
 The integrated `translate` workflow also requires the four standalone skills:
 `translate-to-native`, `translate-to-non-native`, `proofread-non-native`, and
