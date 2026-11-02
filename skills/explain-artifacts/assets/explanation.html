@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="{{LANG}}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{TITLE}}</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #ffffff;
+        --ink: #202b36;
+        --muted: #526170;
+        --accent: #155f70;
+        --line: #cdd8df;
+        --soft: #f1f5f7;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--soft);
+        color: var(--ink);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 1rem;
+        line-height: 1.85;
+        overflow-wrap: anywhere;
+      }
+      main {
+        max-width: 58rem;
+        margin: 2rem auto;
+        padding: clamp(1.25rem, 5vw, 3.5rem);
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 0.75rem;
+      }
+      header { border-bottom: 2px solid var(--accent); padding-bottom: 1.25rem; }
+      h1, h2, h3 { line-height: 1.4; text-wrap: balance; }
+      h1 { margin: 0 0 1rem; font-size: clamp(1.75rem, 4vw, 2.5rem); }
+      h2 { margin-top: 2.5rem; font-size: 1.4rem; }
+      h3 { margin-top: 1.75rem; font-size: 1.15rem; }
+      p, ul, ol { margin-block: 1rem; }
+      li + li { margin-top: 0.4rem; }
+      a { color: var(--accent); text-underline-offset: 0.2em; }
+      a:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+      code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
+      :not(pre) > code { background: var(--soft); padding: 0.15em 0.3em; border-radius: 0.2rem; }
+      pre { padding: 1rem; background: var(--soft); border: 1px solid var(--line); border-radius: 0.4rem; overflow-x: auto; }
+      pre code { overflow-wrap: normal; }
+      .table-scroll { overflow-x: auto; }
+      table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+      caption { text-align: left; font-weight: 600; margin-bottom: 0.5rem; }
+      th, td { border-bottom: 1px solid var(--line); padding: 0.65rem; text-align: left; vertical-align: top; }
+      th { background: var(--soft); }
+      figure { margin: 1.5rem 0; padding: 1rem; border: 1px solid var(--line); border-radius: 0.4rem; }
+      img, svg { display: block; max-width: 100%; height: auto; }
+      figure svg { width: 100%; }
+      figcaption, .source-ref { color: var(--muted); font-size: 0.9rem; }
+      figcaption { margin-top: 0.75rem; }
+      .sources { margin-top: 2.5rem; padding-top: 0.5rem; border-top: 1px solid var(--line); }
+      @media (max-width: 40rem) {
+        main { margin: 0; border: 0; border-radius: 0; }
+      }
+      @media print {
+        body { background: white; }
+        main { margin: 0; max-width: none; padding: 0; border: 0; }
+        h2, h3 { break-after: avoid; }
+        pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>{{TITLE}}</h1>
+        <p>{{SUMMARY}}</p>
+      </header>
+
+      <!-- Adapt or repeat sections to suit the artifacts. Remove unused markup. -->
+      <section aria-labelledby="explanation-heading">
+        <h2 id="explanation-heading">{{SECTION_HEADING}}</h2>
+        <p>{{EXPLANATION}}</p>
+        <p class="source-ref">{{SOURCE_REFERENCE}}</p>
+      </section>
+
+      <!-- Optional diagrams belong in a figure with inline SVG and a caption. -->
+
+      <section class="sources" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">{{SOURCES_HEADING}}</h2>
+        <ul>
+          <li>{{SOURCE_LOCATION}}</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

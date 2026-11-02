@@ -1,0 +1,4 @@
+interface:
+  display_name: "Explain Artifacts"
+  short_description: "Explain artifacts in evidence-based standalone HTML"
+  default_prompt: "Use $explain-artifacts to explain these artifacts in a readable single-file HTML page, with SVG diagrams if helpful."

@@ -27,6 +27,7 @@ instructions.
 | Skill | Description |
 | --- | --- |
 | [`conventional-commits`](skills/conventional-commits/SKILL.md) | Write and review commit messages using the Conventional Commits 1.0.0 specification. |
+| [`explain-artifacts`](skills/explain-artifacts/SKILL.md) | Explain artifacts in evidence-based single-file HTML with optional SVG diagrams. |
 | [`multi-agent-review`](skills/multi-agent-review/SKILL.md) | Coordinate independent reviews and validate their findings. |
 | [`proofread-non-native`](skills/proofread-non-native/SKILL.md) | Evaluate and improve non-native-language text, explaining revisions in the user's native language. |
 | [`reply-in-non-native`](skills/reply-in-non-native/SKILL.md) | Translate incoming messages and outgoing replies using conversation context. |
