@@ -29,6 +29,7 @@ instructions.
 | [`conventional-commits`](skills/conventional-commits/SKILL.md) | Write and review commit messages using the Conventional Commits 1.0.0 specification. |
 | [`explain-artifacts`](skills/explain-artifacts/SKILL.md) | Explain artifacts in evidence-based single-file HTML with optional SVG diagrams. |
 | [`multi-agent-review`](skills/multi-agent-review/SKILL.md) | Coordinate independent reviews and validate their findings. |
+| [`pr-review-comments`](skills/pr-review-comments/SKILL.md) | Format and place pull request review comments consistently. |
 | [`proofread-non-native`](skills/proofread-non-native/SKILL.md) | Evaluate and improve non-native-language text, explaining revisions in the user's native language. |
 | [`reply-in-non-native`](skills/reply-in-non-native/SKILL.md) | Translate incoming messages and outgoing replies using conversation context. |
 | [`technical-writing-review`](skills/technical-writing-review/SKILL.md) | Review technical documents for clarity, structure, accuracy, and task success. |
