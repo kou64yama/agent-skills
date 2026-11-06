@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Review Comments"
+  short_description: "Format and place PR review comments"
+  default_prompt: "Use $pr-review-comments to format and place these pull request review findings."
