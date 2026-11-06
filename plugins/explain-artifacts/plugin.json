@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "explain-artifacts",
+  "version": "1.0.0",
+  "description": "Explain artifacts in a self-contained HTML page."
+}
