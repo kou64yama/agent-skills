@@ -1,107 +1,82 @@
 # Agent Skills
 
-Personal Codex skill definitions and related agent metadata.
+Reusable agent skills distributed as purpose-specific portable Agent Plugins.
+The repository marketplace makes each plugin available separately. Plugin
+versions are managed independently; all start at `1.0.0`.
 
-This repository is a home for reusable agent skills. Each skill lives in its
-own directory and can include the skill definition, agent-specific metadata,
-supporting prompts, scripts, or assets.
+## Plugins and skills
 
-## Repository Layout
-
-```text
-skills/
-  <skill-name>/
-    SKILL.md
-    agents/
-      <agent>.yaml
-```
-
-Add new skills as sibling directories under `skills/`.
-
-## Skills
-
-Each subdirectory under `skills/` is an installable skill. See the `SKILL.md`
-inside each skill directory for its purpose, trigger description, and operating
-instructions.
-
-| Skill | Description |
+| Plugin | Skills |
 | --- | --- |
-| [`conventional-commits`](skills/conventional-commits/SKILL.md) | Write and review commit messages using the Conventional Commits 1.0.0 specification. |
-| [`explain-artifacts`](skills/explain-artifacts/SKILL.md) | Explain artifacts in evidence-based single-file HTML with optional SVG diagrams. |
-| [`multi-agent-review`](skills/multi-agent-review/SKILL.md) | Coordinate independent reviews and validate their findings. |
-| [`pr-review-comments`](skills/pr-review-comments/SKILL.md) | Format and place pull request review comments consistently. |
-| [`proofread-non-native`](skills/proofread-non-native/SKILL.md) | Evaluate and improve non-native-language text, explaining revisions in the user's native language. |
-| [`reply-in-non-native`](skills/reply-in-non-native/SKILL.md) | Translate incoming messages and outgoing replies using conversation context. |
-| [`technical-writing-review`](skills/technical-writing-review/SKILL.md) | Review technical documents for clarity, structure, accuracy, and task success. |
-| [`translate`](skills/translate/SKILL.md) | Select the appropriate translation skill and retain language, style, and conversation settings. |
-| [`translate-to-native`](skills/translate-to-native/SKILL.md) | Translate foreign-language text into the user's native language with explanations of key choices. |
-| [`translate-to-non-native`](skills/translate-to-non-native/SKILL.md) | Translate native-language text into another language with the requested style. |
+| [`translation`](plugins/translation/) | [`translate`](plugins/translation/skills/translate/SKILL.md), [`translate-to-native`](plugins/translation/skills/translate-to-native/SKILL.md), [`translate-to-non-native`](plugins/translation/skills/translate-to-non-native/SKILL.md), [`proofread-non-native`](plugins/translation/skills/proofread-non-native/SKILL.md), [`reply-in-non-native`](plugins/translation/skills/reply-in-non-native/SKILL.md) |
+| [`technical-writing`](plugins/technical-writing/) | [`technical-writing-review`](plugins/technical-writing/skills/technical-writing-review/SKILL.md) |
+| [`review`](plugins/review/) | [`multi-agent-review`](plugins/review/skills/multi-agent-review/SKILL.md), [`pr-review-comments`](plugins/review/skills/pr-review-comments/SKILL.md) |
+| [`conventional-commits`](plugins/conventional-commits/) | [`conventional-commits`](plugins/conventional-commits/skills/conventional-commits/SKILL.md) |
+| [`explain-artifacts`](plugins/explain-artifacts/) | [`explain-artifacts`](plugins/explain-artifacts/skills/explain-artifacts/SKILL.md) |
 
-The integrated `translate` workflow also requires the four standalone skills:
-`translate-to-native`, `translate-to-non-native`, `proofread-non-native`, and
-`reply-in-non-native`. Install them alongside `translate`; each standalone skill
-can also be used independently.
+The `translate` coordinator uses the four other translation skills. The
+`translation` plugin includes all of them, and each can also be used on its own.
+See each `SKILL.md` for its purpose and instructions.
 
 ## Installation
 
-Install skills with the [`vercel-labs/skills`](https://github.com/vercel-labs/skills)
-CLI:
+The repository includes a marketplace at
+[`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json). In a
+supported Codex CLI, add the repository as a marketplace and install the desired
+plugin:
 
 ```sh
-npx skills add kou64yama/agent-skills -a codex
+codex plugin marketplace add kou64yama/agent-skills
+codex plugin list --marketplace agent-skills
+codex plugin add translation@agent-skills
 ```
 
-Install a specific skill by name:
+Replace `translation` with any plugin name in the table. For local development,
+run `codex plugin marketplace add .` from the repository root instead. The
+marketplace can also be selected in the ChatGPT desktop app's Plugins Directory;
+restart the app after adding a local marketplace. See the
+[OpenAI plugin packaging documentation](https://developers.openai.com/plugins/build/plugins)
+for supported clients and marketplace setup.
 
-```sh
-npx skills add kou64yama/agent-skills -a codex --skill <skill-name>
-```
-
-Install globally so the skills are available across projects:
-
-```sh
-npx skills add kou64yama/agent-skills -a codex -g
-```
-
-List available skills without installing:
-
-```sh
-npx skills add kou64yama/agent-skills --list
-```
-
-The `skills` CLI can install from GitHub shorthand, full GitHub URLs, local
-paths, and direct paths to a skill directory. Restart Codex after installing or
-updating skills so it can discover the latest definitions.
+The former `npx skills add` repository-wide installation has not been verified
+with this layout. Use the plugin marketplace for distribution.
 
 ## Usage
 
-Reference the skill by name in a coding request:
+After installation, reference a skill by name in a request, for example:
 
 ```text
-Use $<skill-name> to help with this task.
+Use $translate to help with this task.
 ```
 
-Some skills may also include agent-specific metadata under `agents/`, such as
-display names, short descriptions, or default prompts.
+Some skills include agent-specific metadata under `agents/`.
 
-## Development
+## Repository layout and development
 
-Skill behavior lives in each skill's `SKILL.md`. Keep instructions concise,
-action-oriented, and easy for an agent to apply during an active session.
+```text
+.agents/plugins/marketplace.json
+plugins/
+  <plugin-name>/
+    plugin.json
+    skills/
+      <skill-name>/
+        SKILL.md
+        agents/
+        references/  # optional
+        assets/      # optional
+```
 
-When updating a skill, check that:
+Each plugin owns its skills and portable root `plugin.json`. Keep related skills
+that use relative links together. To add a skill, create its directory under the
+appropriate plugin's `skills/` directory, add YAML front matter with a clear
+`name` and `description`, and include any metadata or supporting files there.
+For a new plugin, add a manifest and register its repository-root-relative path
+in the marketplace. Update the table above and increment the affected plugin's
+version when releasing changes.
 
-- the YAML front matter has a clear `name` and `description`;
-- the usage trigger is specific enough to avoid accidental activation;
-- the workflow gives practical guidance without over-constraining the agent;
-- related agent metadata remains aligned with the skill.
-
-When adding a new skill:
-
-- create `skills/<skill-name>/SKILL.md`;
-- include clear YAML front matter with `name` and `description`;
-- add optional agent metadata under `skills/<skill-name>/agents/`;
-- update this README with a short entry under [Skills](#skills).
+When changing a skill, check its trigger, workflow, metadata, and relative links.
+After changing a plugin, refresh its installed copy and restart the client before
+testing discovery and behavior.
 
 ## License
 
