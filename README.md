@@ -9,7 +9,7 @@ versions are managed independently; all start at `1.0.0`.
 | Plugin | Skills |
 | --- | --- |
 | [`translation`](plugins/translation/) | [`translate`](plugins/translation/skills/translate/SKILL.md), [`translate-to-native`](plugins/translation/skills/translate-to-native/SKILL.md), [`translate-to-non-native`](plugins/translation/skills/translate-to-non-native/SKILL.md), [`proofread-non-native`](plugins/translation/skills/proofread-non-native/SKILL.md), [`reply-in-non-native`](plugins/translation/skills/reply-in-non-native/SKILL.md) |
-| [`technical-writing`](plugins/technical-writing/) | [`technical-writing-review`](plugins/technical-writing/skills/technical-writing-review/SKILL.md) |
+| [`technical-writing`](plugins/technical-writing/) | [`technical-writing`](plugins/technical-writing/skills/technical-writing/SKILL.md) |
 | [`review`](plugins/review/) | [`multi-agent-review`](plugins/review/skills/multi-agent-review/SKILL.md), [`pr-review-comments`](plugins/review/skills/pr-review-comments/SKILL.md) |
 | [`conventional-commits`](plugins/conventional-commits/) | [`conventional-commits`](plugins/conventional-commits/skills/conventional-commits/SKILL.md) |
 | [`explain-artifacts`](plugins/explain-artifacts/) | [`explain-artifacts`](plugins/explain-artifacts/skills/explain-artifacts/SKILL.md) |
