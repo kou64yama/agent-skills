@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "technical-writing",
-  "version": "1.0.0",
-  "description": "Review technical documentation for clarity, accuracy, and usability."
+  "version": "2.0.0",
+  "description": "Apply technical writing principles to documentation and error messages."
 }
