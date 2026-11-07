@@ -23,4 +23,12 @@ Use a meaningful heading hierarchy and descriptive link text. Give informative i
 
 Explain what happened, the known cause, and a concrete recovery action when available. Identify relevant invalid input and requirements, and include a valid example when helpful. Use concise, consistent language suited to the audience without blaming the user. Put the message near the problem and link to details when needed. Separate user-facing guidance from diagnostic details and avoid exposing sensitive information.
 
-Adapt these principles to the document and language; English-specific grammar advice does not automatically apply to other languages. Source knowledge was synthesized from the Obsidian notes technical-writing-fundamentals, technical-writing-intermediate, accessible-technical-writing, and helpful-error-messages.
+Adapt these principles to the document and language; English-specific grammar advice does not automatically apply to other languages.
+
+
+## Sources
+
+- [Google Technical Writing One](https://developers.google.com/tech-writing/one)
+- [Google Technical Writing Two](https://developers.google.com/tech-writing/two)
+- [Tech Writing for Accessibility](https://developers.google.com/tech-writing/accessibility/self-study)
+- [Writing Helpful Error Messages](https://developers.google.com/tech-writing/error-messages)
