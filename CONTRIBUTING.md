@@ -35,11 +35,16 @@ When adding or changing a skill or plugin:
 
 - Place each skill under `plugins/<plugin-name>/skills/<skill-name>/` with a
   `SKILL.md` containing YAML front matter with a clear `name` and `description`.
-- Keep related skills and their relative links together. Place optional agent
-  metadata, references, and assets within the skill directory.
+- Add `agents/openai.yaml` within each skill directory with an `interface`
+  containing `display_name`, `short_description`, and `default_prompt`. Keep
+  related skills and their relative links together, and place optional
+  references and assets within the skill directory.
 - For a new plugin, add a root `plugin.json`, register its repository-relative
   path in `.agents/plugins/marketplace.json`, and update the README's plugin
-  table. Update the table when adding or removing skills, too.
+  table. Update the table when adding or removing skills or changing their
+  `short_description`: use one row per skill, link to the plugin and skill,
+  copy the `short_description` into the Description column, and sort by plugin
+  name and then skill name in ascending order.
 - Plugin versions are managed independently. Increment the affected plugin's
   version when releasing changes.
 - Follow [`.editorconfig`](.editorconfig) for whitespace and file formatting.
@@ -47,8 +52,9 @@ When adding or changing a skill or plugin:
 ## Checking changes
 
 Review changed skills for clear triggers and instructions, valid metadata, and
-working relative links. Check that referenced files exist and that changed
-plugin and marketplace manifests are valid JSON.
+working relative links. Check that referenced files exist, that README table
+descriptions match their skill metadata, and that changed plugin and marketplace
+manifests are valid JSON.
 
 For local testing, add the checkout as a marketplace from the repository root
 with `codex plugin marketplace add .` and install the relevant plugin as
