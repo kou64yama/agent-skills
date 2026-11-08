@@ -15,7 +15,7 @@ versions are managed independently; all start at `1.0.0`.
 | [`github-workflows`](plugins/github-workflows/) | [`merge-pull-request`](plugins/github-workflows/skills/merge-pull-request/SKILL.md) | Help with Merge Pull Request tasks
 | [`review`](plugins/review/) | [`multi-agent-review`](plugins/review/skills/multi-agent-review/SKILL.md) | Coordinate independent reviews and validation
 | [`review`](plugins/review/) | [`pr-review-comments`](plugins/review/skills/pr-review-comments/SKILL.md) | Format and place PR review comments
-| [`technical-writing`](plugins/technical-writing/) | [`technical-writing`](plugins/technical-writing/skills/technical-writing/SKILL.md) | Apply technical writing principles when creating or editing technical documentation, explanations, and error messages for a specific audience. |
+| [`technical-writing`](plugins/technical-writing/) | [`technical-writing`](plugins/technical-writing/skills/technical-writing/SKILL.md) | Improve technical documentation and explanations |
 | [`translation`](plugins/translation/) | [`proofread-non-native`](plugins/translation/skills/proofread-non-native/SKILL.md) | Review naturalness, consistency, and tone
 | [`translation`](plugins/translation/) | [`reply-in-non-native`](plugins/translation/skills/reply-in-non-native/SKILL.md) | Translate incoming messages and outgoing replies
 | [`translation`](plugins/translation/) | [`translate`](plugins/translation/skills/translate/SKILL.md) | Choose translation, proofreading, or reply support
