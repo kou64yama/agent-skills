@@ -53,6 +53,18 @@
       "category": "Productivity"
     },
     {
+      "name": "github-workflows",
+      "source": {
+        "source": "local",
+        "path": "./plugins/github-workflows"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
       "name": "explain-artifacts",
       "source": {
         "source": "local",

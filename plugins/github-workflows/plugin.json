@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "github-workflows",
+  "version": "1.0.0",
+  "description": "Create issues and pull requests and merge pull requests using repository conventions."
+}
