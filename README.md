@@ -13,6 +13,7 @@ versions are managed independently; all start at `1.0.0`.
 | [`review`](plugins/review/) | [`multi-agent-review`](plugins/review/skills/multi-agent-review/SKILL.md), [`pr-review-comments`](plugins/review/skills/pr-review-comments/SKILL.md) |
 | [`conventional-commits`](plugins/conventional-commits/) | [`conventional-commits`](plugins/conventional-commits/skills/conventional-commits/SKILL.md) |
 | [`explain-artifacts`](plugins/explain-artifacts/) | [`explain-artifacts`](plugins/explain-artifacts/skills/explain-artifacts/SKILL.md) |
+| [`github-workflows`](plugins/github-workflows/) | [`create-pull-request`](plugins/github-workflows/skills/create-pull-request/SKILL.md), [`create-issue`](plugins/github-workflows/skills/create-issue/SKILL.md), [`merge-pull-request`](plugins/github-workflows/skills/merge-pull-request/SKILL.md) |
 
 The `translate` coordinator uses the four other translation skills. The
 `translation` plugin includes all of them, and each can also be used on its own.
