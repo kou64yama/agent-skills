@@ -1,7 +1,7 @@
 {
-  "name": "agent-skills",
+  "name": "kou64yama-agent-plugins",
   "interface": {
-    "displayName": "Agent Skills"
+    "displayName": "kou64yama-agent-plugins"
   },
   "plugins": [
     {
